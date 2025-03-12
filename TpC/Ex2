@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int tab[] = {1, 2, 3, 4, 5, 6};
+    int size = sizeof(tab) / sizeof(tab[0]); 
+
+    std::cout << "Les couples dont la somme est égale à " << nb << ":" << std::endl;
+
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (tab[i] + tab[j] == nb) {
+                std::cout << "(" << tab[i] << ", " << tab[j] << ")" << std::endl;
+            }
+        }
+    }
+
+    return 0;
+}
